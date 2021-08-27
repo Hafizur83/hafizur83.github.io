@@ -1,0 +1,48 @@
+@media (max-width: 1500px){
+    .hero_area{
+        padding: 20px 30px;
+    }
+}
+@media (max-width: 1199px){
+    .hero_area{
+        padding: 20px 0;
+    }
+    .hero_title {
+        font-size: 50px;
+    }
+
+
+}
+@media (max-width: 991px){
+	.border_style{
+        padding-left: 100px;
+        padding-bottom: 30px;
+    }
+    .hero_title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px){
+    .border_style{
+        padding-left: 20px;
+        padding-bottom: 30px;
+    }
+    
+}
+
+@media (max-width: 575px){
+	
+}
+@media (max-width: 479px){
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	

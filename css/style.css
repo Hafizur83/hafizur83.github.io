@@ -1,0 +1,560 @@
+
+/*FONT FAMILY*/
+@font-face{
+	font-family:'Montserrat-Bold';
+	src: url(../fonts/Montserrat-Bold.ttf)
+}
+
+
+/* -----------------
+::: BASIC CSS
+----------------- */
+
+*{
+	margin: 0;
+	padding: 0;
+    scroll-behavior: smooth}
+body{
+	font-size: 15px;
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+h1{
+	font-size: 60px;
+}
+h2{
+	font-size: 34px;
+}
+h3{
+	font-size: 20px;
+}
+h4{
+	font-size: 18px;
+}
+h5{
+	font-size: 14px;
+}
+p {
+	color: rgb(2 2 51);
+	font-size: 15px;
+	line-height: 26px;
+    margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  outline: 0 solid transparent;
+  font-weight: 400; }
+
+  a:hover, a:focus {
+    text-decoration: none;
+    outline: 0 solid transparent; }
+
+ul,
+ol {
+  margin: 0; }
+  ul li,
+  ol li {
+    list-style: none; }
+img{
+    max-width: 100%;
+}
+a,button{
+    border: none;
+    color: inherit;
+    background: transparent;
+}
+button:focus{
+    outline: none;
+}
+.btn{
+    position: relative;
+	text-transform: uppercase;
+	color: #ffffff;
+    background: #68b029;
+	font-size: 16px;
+	padding: 15px 40px 15px 40px;
+	border-radius: 4px;
+    z-index: 2;
+}
+.btn:hover{
+    color: #fff;
+}
+.btn:before{
+    content: '';
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: #6270ff;
+    left: 0;
+    top: 0;
+    color: #fff;
+    z-index: -1;
+    transition: all .5s ease-out 0s;
+}
+.btn:hover:before{
+    width: 100%;
+}
+/* -------------------------------------------
+::: CSS
+------------------------------------------- */
+.section_title{
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+}
+.section_title span{
+    color: #f0f1f3;
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -13px;
+}
+.section_title h3{
+    position: relative;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+#preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #e5eff1;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* -------------------------------------------
+::: Header CSS
+------------------------------------------- */
+header#header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+#header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #0c1d2c;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+}
+.navbar-brand {
+    font-size: 32px;
+    color: #0c1d2c;
+    font-weight: 700;
+    margin-right: auto;
+}
+.sticky .navbar-brand {
+    color: #fff;
+}
+.nav-menu li {
+    padding-right: 20px;
+}
+.nav-menu li.active a,.nav-menu li a:hover {
+    color: #68b029;
+}
+.sticky .nav-menu li.active a, .sticky .nav-menu li a:hover {
+    color: #68b029;
+}
+.nav-menu li a{
+    font-size: 18px;
+    color: #0c1d2c;
+    text-transform: capitalize;
+    transition: all .3s;
+}
+.sticky .nav-menu li a{
+    color: #fff;
+}
+/*---------------
+::: Mobile Menu
+----------------*/
+.navbar-btn {
+    position: fixed;
+    top: 11px;
+    right: 36px;
+    z-index: 999;
+    font-size: 25px;
+    color: #000;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.sticky .navbar-btn{
+    color: #fff;
+}
+.mobile-nav-active .mobile-menu {
+    left: 0;
+    transition: all .5s;
+}
+.navbar-btn:focus{
+    outline: none;
+}
+.mobile-menu .navbar-btn{
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #000;
+}
+.mobile-menu{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    z-index: 999;
+    text-align: center;
+    transition: all .5s;
+}
+.mobile_mav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.mobile-menu li{
+    margin-bottom: 15px;
+}
+.mobile-menu li.active a{
+    color: #68b029;
+}
+.mobile-menu li:last-child{
+    margin-bottom: 0;
+}
+.mobile-menu li a{
+    font-size: 20px;
+    color: #2e2e2e;
+    text-transform: capitalize;
+}
+
+/* -------------------------------------------
+::: Hero CSS
+------------------------------------------- */
+.hero_area{
+    background: #fef5fe;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 110px;
+}
+.border_style {
+    border: 3px solid #000;
+    border-radius: 40px;
+    background: #f8e8f8;
+    padding-left: 115px;
+    margin-top: 115px;
+}
+.hero_text{
+    padding-top: 120px;
+}
+span.hero_sub_title {
+    position: relative;
+    margin-left: 75px;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+.hero_sub_title::before {
+    position: absolute;
+    top: 50%;
+    left: -75px;
+    width: 60px;
+    height: 1px;
+    background: #000;
+    content: "";
+}
+.hero_title{
+    margin-bottom: 40px;
+}
+.hero_social li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.hero_social li:last-child{
+    margin-right: 0;
+}
+.hero_social li a{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #68b029;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+}
+.hero_social li a:hover{
+    background: #6270ff
+}
+/* -------------------------------------------
+::: About CSS
+------------------------------------------- */
+section.about{
+    padding-top: 60px;
+    padding-bottom: 50px
+}
+.about .section_title{
+    padding-top: 20px;
+}
+/* -------------------------------------------
+::: Services CSS
+------------------------------------------- */
+section.services{
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.service_item {
+    box-shadow: rgb(2 2 51 / 10%) 0px 20px 30px 0px;
+    background: rgb(255, 255, 255);
+    padding: 50px 40px;
+}
+.services_icon{
+    margin-bottom: 20px;
+}
+.services_icon img{
+    width: 50px;
+}
+.services_info h4{
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.services_info p{
+    color: rgb(81 81 93);
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+/* -------------------------------------------
+::: Skill CSS
+------------------------------------------- */
+section.skill{
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.skill_title{
+    color: #000;
+    font-size: 21px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.skill_item{
+    margin-bottom: 15px;
+}
+.skill_item h6{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px
+}
+.progress {
+    background: #ddd;
+    height: 7px;
+}
+.progress-bar{
+    width: 0;
+    height: 7px;
+    background: #68b029;
+    transition-duration: 1000ms;
+}
+
+/* -------------------------------------------
+::: Portfolio CSS
+------------------------------------------- */
+section.portfolio{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background: #f7fafb;
+}
+section.portfolio.main{
+    padding-top: 100px;
+}
+#filter_controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#filter_controls li {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #444444;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+#filter_controls li:after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #6270ff;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    opacity: 0;
+    transition: all .5s;
+}
+#filter_controls li.mixitup-control-active,
+#filter_controls li:hover{
+    color: #6270ff;
+}
+#filter_controls li.mixitup-control-active:after,
+#filter_controls li:hover:after{
+    opacity: 1;
+}
+.portfolio_item{
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio_item img{
+    width: 100%;
+    min-height: 480px;
+    height: 100%;
+} 
+.portfolio_item:hover .portfolio_info_overlay{
+    opacity: .7;
+}
+.portfolio_info_overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background: #6270ff;
+    transition: all .5s;
+}
+.portfolio_info_overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio_info{
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+}
+.portfolio_info_link a{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* -------------------------------------------
+::: Footer CSS
+------------------------------------------- */
+footer{
+    background: #0c1d2c;
+    color: #fff;
+}
+.footer_top{
+    padding: 60px 0
+}
+.about_me img{
+    margin-bottom: 20px;
+}
+.about_me p{
+    margin-bottom: 0;
+    color: #fff;
+}
+.footer_link ul{
+    width: 50%;
+    float: left;
+}
+.footer_link li a{
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+}
+.footer h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.info_box{
+    display: flex;
+    margin-bottom: 20px;
+}
+.info_box i{
+    font-size: 22px;
+    margin-right: 10px;
+}
+.info_box p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.footer_bottom {
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+.copyright p{
+    color: #fff;
+    margin-bottom: 0;
+}
+#topbtn {
+	position: fixed;
+    font-size: 35px;
+    color: #fff;
+    background: #68b029;
+    padding: 3px 8px;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 999;
+    border: 0;
+	outline: 0;
+    transition: all .5s
+}
+#topbtn:hover{
+    background: #6270ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
