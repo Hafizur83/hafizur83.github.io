@@ -1,7 +1,7 @@
 // jQuery preloader
-$(window).on('load', function () {
-    $('#preloader').fadeOut(2000)
-})
+//$(window).on('load', function () {
+//    $('#preloader').fadeOut(2000)
+//})
 
 /*------------------
         Background Set
